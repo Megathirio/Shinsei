@@ -18,7 +18,7 @@ public class ShinseiPickaxe extends ItemPickaxe {
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IIconRegister iconRegister){
 		
-		itemIcon = iconRegister.registerIcon(References.MODID + ":" + this.getUnlocalizedName());
+		itemIcon = iconRegister.registerIcon(References.MODID + ":" + this.getUnlocalizedName().substring(5));
 	}
 
 }
