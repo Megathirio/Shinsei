@@ -35,11 +35,12 @@ public final class ShinseiItems {
 
 		//Tool Parts		
 		itemStonePickaxeHead = new ShinseiItem().setUnlocalizedName("stone_pickaxe_head");
-		GameRegistry.registerItem(itemStonePickaxeHead, "stone_pickaxe_head");
+		GameRegistry.registerItem(itemCopperPickaxe, "copper_pickaxe");
 		itemCopperPickaxeHead = new ShinseiItem().setUnlocalizedName("copper_pickaxe_head");
-		GameRegistry.registerItem(itemCopperPickaxeHead, "copper_pickaxe_head");
+		GameRegistry.registerItem(itemCopperPickaxe, "copper_pickaxe");
 
 		//Tools		
+		itemSilverPickaxe = new ShinseiPickaxe(Main.materialCopper).setUnlocalizedName("silver_pickaxe");
 		itemCopperPickaxe = new ShinseiPickaxe(Main.materialCopper).setUnlocalizedName("copper_pickaxe");
 		GameRegistry.registerItem(itemCopperPickaxe, "copper_pickaxe");
 		itemCopperAxe = new ShinseiAxe(Main.materialCopper).setUnlocalizedName("copper_axe");
