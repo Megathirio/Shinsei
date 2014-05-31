@@ -17,9 +17,7 @@ public class CraftingHandler {
 	public static void registerRecipes(){
 		
 		// Shapeless
-		GameRegistry.addShapelessRecipe(new ItemStack(ShinseiBlocks.blockLimestone), ShinseiItems.itemLimestoneShard, ShinseiItems.itemLimestoneShard);
-		GameRegistry.addShapelessRecipe(new ItemStack(ShinseiBlocks.blockLimestone), ShinseiItems.itemLimestoneShard, ShinseiItems.itemCalciteShard, ShinseiItems.itemCalciteShard);
-		GameRegistry.addShapelessRecipe(new ItemStack(ShinseiBlocks.blockLimestone), ShinseiItems.itemCalciteShard, ShinseiItems.itemCalciteShard, ShinseiItems.itemCalciteShard, ShinseiItems.itemCalciteShard);
+		GameRegistry.addShapelessRecipe(new ItemStack(ShinseiBlocks.blockLimestone), ShinseiItems.itemLimestoneShard, ShinseiItems.itemLimestoneShard, ShinseiItems.itemLimestoneShard, ShinseiItems.itemLimestoneShard);
 
 		// Shaped
 		GameRegistry.addRecipe(new ItemStack(Blocks.furnace, 1), "xxx","x x","xxx", 'x', ShinseiBlocks.blockLimestone);
@@ -31,7 +29,7 @@ public class CraftingHandler {
 		
 		// Smelting
 		GameRegistry.addSmelting(ShinseiBlocks.blockLimestone, new ItemStack(ShinseiBlocks.blockMarble), 1f);
-		GameRegistry.addSmelting(ShinseiItems.itemCopperIngot, new ItemStack(ShinseiBlocks.blockCopperOre), 1f);
+		GameRegistry.addSmelting(ShinseiBlocks.blockCopperOre, new ItemStack(ShinseiItems.itemCopperIngot), 1f);
 	}
 
 }

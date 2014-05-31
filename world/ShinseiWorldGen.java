@@ -38,12 +38,15 @@ public class ShinseiWorldGen implements IWorldGenerator{
 	}
 
 	public void generateSurface(Random random, int chunkX, int chunkZ, World world) {
-		
-		addOreSpawn(ShinseiBlocks.blockCalciteOre, world, random, chunkX, chunkZ, 4, 16, 25, 0, 256);
+		//Specific Ore Generation
+		addOreSpawn(ShinseiBlocks.blockClaystone, world, random, chunkX, chunkZ, 4, 16, 25, 55, 64);
+		addOreSpawn(ShinseiBlocks.blockSiltstone, world, random, chunkX, chunkZ, 4, 16, 25, 55, 64);
 		addOreSpawn(ShinseiBlocks.blockLimestone, world, random, chunkX, chunkZ, 8, 32, 25, 35, 256);
 		addOreSpawn(ShinseiBlocks.blockCopperOre, world, random, chunkX, chunkZ, 8, 32, 25, 0, 256);
+		
 	}
-
+	
+	//Ore Generation Method
 	public void addOreSpawn(Block block, World world, Random random,
 			int blockXPos, int blockZPos, int minVainSize, int maxVainSize, int chancesToSpawn, int minY, int maxY) {
 	

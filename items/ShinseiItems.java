@@ -7,7 +7,7 @@ import net.minecraft.item.Item;
 public final class ShinseiItems {
 
 	//Item Variables
-	public static Item itemCalciteShard;
+	public static Item itemSilt;
 	public static Item itemLimestoneShard;
 	public static Item itemCopperIngot;
 	public static Item itemStonePickaxeHead;
@@ -24,12 +24,14 @@ public final class ShinseiItems {
 	//Item Initialization
 		
 		//Ores
-		itemCalciteShard = new ShinseiItem().setUnlocalizedName("calcite_shard");
-		GameRegistry.registerItem(itemCalciteShard, "calcite_shard");
 		itemLimestoneShard = new ShinseiItem().setUnlocalizedName("limestone_shard");
 		GameRegistry.registerItem(itemLimestoneShard, "limestone_shard");
 		itemCopperIngot = new ShinseiItem().setUnlocalizedName("copper_ingot");
 		GameRegistry.registerItem(itemCopperIngot, "copper_ingot");
+
+		//Minerals
+		itemSilt = new ShinseiItem().setUnlocalizedName("silt");
+		GameRegistry.registerItem(itemSilt, "silt");
 
 		//Tool Parts		
 		itemStonePickaxeHead = new ShinseiItem().setUnlocalizedName("stone_pickaxe_head");
