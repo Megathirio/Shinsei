@@ -7,30 +7,40 @@ import net.minecraft.block.material.Material;
 
 public final class ShinseiBlocks {
 
-	//Block Variables
-	public static Block blockSiltstone;
+//Block Variables
+	//Mineral Blocks
 	public static Block blockClaystone;
 	public static Block blockLimestone;
-	public static Block blockMarble;
+	public static Block blockSiltstone;
+	
+	//Ore Blocks
 	public static Block blockCopperOre;
-	public static Block blockSilverOre;
+	public static Block blockAluminumOre;
 
+	//Building Blocks
+	public static Block blockMarble;
+	
 	public static void init(){
 	
 	//Block Initialization
 		
-		//Ores Blocks
-		blockCopperOre = new ShinseiOre(Material.rock).setBlockName("copper_ore");
-		GameRegistry.registerBlock(blockCopperOre, "copper_ore");
-		blockSilverOre = new ShinseiOre(Material.rock).setBlockName("silver_ore");
-		GameRegistry.registerBlock(blockSilverOre, "silver_ore");
-
 		//Mineral Blocks
+		blockClaystone = new ShinseiOre(Material.rock).setBlockName("claystone").setResistance(2F).setHardness(0.5F);
+		blockClaystone.setHarvestLevel("shovel", 0);
+		GameRegistry.registerBlock(blockClaystone, "claystone");		 
 		blockLimestone = new ShinseiOre(Material.rock).setBlockName("limestone");
 		GameRegistry.registerBlock(blockLimestone, "limestone");
-		blockClaystone = new ShinseiOre(Material.rock).setBlockName("claystone").setResistance(2F);
-		GameRegistry.registerBlock(blockClaystone, "claystone");
+		blockSiltstone = new ShinseiOre(Material.rock).setBlockName("siltstone").setResistance(2F).setHardness(0.5F);
+		blockSiltstone.setHarvestLevel("shovel", 0);
+		GameRegistry.registerBlock(blockSiltstone, "siltstone");		 
 
+
+		//Ore Blocks
+		blockCopperOre = new ShinseiOre(Material.rock).setBlockName("copper_ore");
+		GameRegistry.registerBlock(blockCopperOre, "copper_ore");
+		blockAluminumOre = new ShinseiOre(Material.rock).setBlockName("aluminum_ore");
+		GameRegistry.registerBlock(blockAluminumOre, "silver_ore");
+		
 		//Building Blocks
 		blockMarble = new BlockMarble().setBlockName("marble");
 		GameRegistry.registerBlock(blockMarble, ItemMarbleBlock.class, "marble");

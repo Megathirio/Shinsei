@@ -9,11 +9,13 @@ import net.minecraft.item.ItemSword;
 
 public class ShinseiSword extends ItemSword {
 
+	//Default Sword Properties
 	public ShinseiSword(ToolMaterial material) {
 		super(material);
 		setCreativeTab(Main.getCreativeTab());
 	}
 
+	//Sets Sword Texture
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IIconRegister iconRegister){

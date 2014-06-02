@@ -9,11 +9,13 @@ import net.minecraft.item.ItemHoe;
 
 public class ShinseiHoe extends ItemHoe {
 
+	//Default Hoe Properties
 	public ShinseiHoe(ToolMaterial material) {
 		super(material);
 		setCreativeTab(Main.getCreativeTab());
 	}
 
+	//Sets Hoe Texture
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IIconRegister iconRegister){

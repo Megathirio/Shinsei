@@ -11,6 +11,7 @@ public class ShinseiTab extends CreativeTabs{
 		super(id, modid);
 	}
 	
+	//Sets Icon for the Tab
 	@Override
 	public Item getTabIconItem(){
 		

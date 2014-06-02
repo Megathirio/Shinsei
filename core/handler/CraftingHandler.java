@@ -1,35 +1,32 @@
 package shinsei.core.handler;
 
-import cpw.mods.fml.common.registry.GameRegistry;
-import shinsei.blocks.ShinseiBlocks;
 import shinsei.items.ShinseiItems;
-import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
+import shinsei.items.ShinseiTools;
+import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
+import cpw.mods.fml.common.gameevent.PlayerEvent.ItemCraftedEvent;
+
 
 public class CraftingHandler {
 	
-	public static void init(){
+	public void onCrafting(ItemCraftedEvent event){
 		
-		registerRecipes();
+		final IInventory craftMatrix = null;
+		for(int i = 0; i < event.craftMatrix.getSizeInventory(); i++){
+			if(event.craftMatrix.getStackInSlot(i) != null){
+				
+				ItemStack item0 = event.craftMatrix.getStackInSlot(i);
+				if(item0 != null && item0.getItem() == ShinseiTools.itemCopperAxe){
+					ItemStack k = new ItemStack(ShinseiTools.itemCopperAxe, 2, (item0.getItemDamage() + 1));
+					
+					if(k.getItemDamage() >= k.getMaxDamage()){
+						k.stackSize--;
+					}
+					event.craftMatrix.setInventorySlotContents(i, k);
+				}
+			}
+		}
 	}
+
 	
-	public static void registerRecipes(){
-		
-		// Shapeless
-		GameRegistry.addShapelessRecipe(new ItemStack(ShinseiBlocks.blockLimestone), ShinseiItems.itemLimestoneShard, ShinseiItems.itemLimestoneShard, ShinseiItems.itemLimestoneShard, ShinseiItems.itemLimestoneShard);
-
-		// Shaped
-		GameRegistry.addRecipe(new ItemStack(Blocks.furnace, 1), "xxx","x x","xxx", 'x', ShinseiBlocks.blockLimestone);
-		GameRegistry.addRecipe(new ItemStack(ShinseiItems.itemStonePickaxeHead, 1), "xx ","   ","   ", 'x', ShinseiBlocks.blockLimestone);
-		GameRegistry.addRecipe(new ItemStack(ShinseiItems.itemStonePickaxeHead, 1), "xx ","   ","   ", 'x', Blocks.cobblestone);
-		GameRegistry.addRecipe(new ItemStack(Items.stone_pickaxe, 1), "x  ","y  ","   ", 'x', ShinseiItems.itemStonePickaxeHead, 'y', Items.stick);
-		GameRegistry.addRecipe(new ItemStack(ShinseiItems.itemCopperPickaxe, 1), "x  ","y  ","   ", 'x', ShinseiItems.itemCopperPickaxeHead, 'y', Items.stick);
-		GameRegistry.addRecipe(new ItemStack(ShinseiItems.itemCopperPickaxeHead, 1), "xx ","   ","   ", 'x', ShinseiItems.itemCopperIngot);
-		
-		// Smelting
-		GameRegistry.addSmelting(ShinseiBlocks.blockLimestone, new ItemStack(ShinseiBlocks.blockMarble), 1f);
-		GameRegistry.addSmelting(ShinseiBlocks.blockCopperOre, new ItemStack(ShinseiItems.itemCopperIngot), 1f);
-	}
-
 }

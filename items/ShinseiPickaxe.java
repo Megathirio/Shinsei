@@ -9,16 +9,18 @@ import net.minecraft.item.ItemPickaxe;
 
 public class ShinseiPickaxe extends ItemPickaxe {
 
+	//Default Pickaxe Properties
 	public ShinseiPickaxe(ToolMaterial material) {
 		super(material);
 		setCreativeTab(Main.getCreativeTab());
 	}
 
+	//Sets Pickaxe Texture
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IIconRegister iconRegister){
 		
-		itemIcon = iconRegister.registerIcon(References.MODID + ":" + this.getUnlocalizedName());
+		itemIcon = iconRegister.registerIcon(References.MODID + ":" + this.getUnlocalizedName().substring(5));
 	}
 
 }

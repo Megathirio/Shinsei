@@ -1,15 +1,23 @@
 package shinsei;
 
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
+import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraftforge.common.util.EnumHelper;
+import net.minecraftforge.oredict.OreDictionary;
 import shinsei.blocks.ShinseiBlocks;
 import shinsei.core.handler.CraftingHandler;
+import shinsei.core.handler.FuelHandler;
+import shinsei.core.handler.ShinseiRecipes;
 import shinsei.core.proxy.CommonProxy;
 import shinsei.creativetab.ShinseiTab;
 import shinsei.items.ShinseiItems;
+import shinsei.items.ShinseiTools;
 import shinsei.lib.References;
 import shinsei.world.ShinseiWorldGen;
+import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -20,9 +28,6 @@ import cpw.mods.fml.common.registry.GameRegistry;
 @Mod(modid = References.MODID, name = References.MODNAME, version = References.VERSION)
 
 public class Main {
-	
-	//Materials
-	public static ToolMaterial materialCopper = EnumHelper.addToolMaterial("materialCopper", 2, 150, 5.0F, 2.0F, 14);
 	
 	// Client and Server Proxies 
 	@SidedProxy(clientSide = References.CLIENTPROXYLOCATION, serverSide = References.COMMONPROXYLOCATION)
@@ -45,8 +50,8 @@ public class Main {
 		//Item Initialization
 		ShinseiItems.init();
 
-		//Recipe Initialization
-		CraftingHandler.init();
+		//Tools Initialization
+		ShinseiTools.init();
 
 		//WorldGen Registry
 		GameRegistry.registerWorldGenerator(new ShinseiWorldGen(), 1);
@@ -55,7 +60,15 @@ public class Main {
 	
 	@Mod.EventHandler
 	public static void init(FMLInitializationEvent event){
+
+		//Fuel Handler Register
+		GameRegistry.registerFuelHandler(new FuelHandler());
 		
+		//FMLCommonHandler.instance().bus().register(new CraftingHandler());
+		
+		//Recipes Initialization
+		ShinseiRecipes.init();
+
 	}
 
 	@Mod.EventHandler

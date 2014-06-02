@@ -9,11 +9,13 @@ import net.minecraft.item.ItemSpade;
 
 public class ShinseiShovel extends ItemSpade {
 
+	//Default Shovel Properties
 	public ShinseiShovel(ToolMaterial material) {
 		super(material);
 		setCreativeTab(Main.getCreativeTab());
 	}
 
+	//Sets Shovel Texture
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IIconRegister iconRegister){
