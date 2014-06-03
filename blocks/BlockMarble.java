@@ -48,6 +48,7 @@ public class BlockMarble extends Block{
 	}
 	
 	//MetaBlocks added to CreativeTab
+	@SuppressWarnings({ "unchecked", "rawtypes" })
 	@SideOnly(Side.CLIENT)
 	public void getSubBlocks(Item block, CreativeTabs creativeTabs, List list){
 		

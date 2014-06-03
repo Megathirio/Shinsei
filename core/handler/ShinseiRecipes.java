@@ -14,9 +14,12 @@ public class ShinseiRecipes {
 		
 		// Shapeless
 		GameRegistry.addShapelessRecipe(new ItemStack(ShinseiBlocks.blockLimestone), ShinseiItems.itemLimestoneShard, ShinseiItems.itemLimestoneShard);
+		GameRegistry.addShapelessRecipe(new ItemStack(Blocks.clay), ShinseiItems.itemSilt, ShinseiItems.itemSilt, ShinseiItems.itemSilt, Blocks.dirt);
 
 		// Shaped
 		GameRegistry.addRecipe(new ItemStack(Blocks.furnace, 1), "xxx","x x","xxx", 'x', ShinseiBlocks.blockLimestone);
+		GameRegistry.addRecipe(new ItemStack(ShinseiBlocks.blockCopperBlock, 1), "xxx","xxx","xxx", 'x', ShinseiItems.itemCopperIngot);
+		GameRegistry.addRecipe(new ItemStack(ShinseiBlocks.blockAluminumBlock, 1), "xxx","xxx","xxx", 'x', ShinseiItems.itemAluminumIngot);
 //		GameRegistry.addRecipe(new ItemStack(ShinseiItems.itemSplitWood, 2), "xy", 'x', Blocks.log, "y", Items.iron_axe);
 
 		//Tool Parts

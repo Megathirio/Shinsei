@@ -8,6 +8,7 @@ import net.minecraft.item.Item.ToolMaterial;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.oredict.OreDictionary;
 import shinsei.blocks.ShinseiBlocks;
+import shinsei.blocks.ShinseiMachines;
 import shinsei.core.handler.CraftingHandler;
 import shinsei.core.handler.FuelHandler;
 import shinsei.core.handler.ShinseiRecipes;
@@ -46,6 +47,9 @@ public class Main {
 
 		//Block Initialization
 		ShinseiBlocks.init();
+
+		//Machines Initialization
+		ShinseiMachines.init();
 
 		//Item Initialization
 		ShinseiItems.init();

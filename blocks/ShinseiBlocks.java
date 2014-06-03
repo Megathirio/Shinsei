@@ -16,6 +16,8 @@ public final class ShinseiBlocks {
 	//Ore Blocks
 	public static Block blockCopperOre;
 	public static Block blockAluminumOre;
+	public static Block blockCopperBlock;
+	public static Block blockAluminumBlock;
 
 	//Building Blocks
 	public static Block blockMarble;
@@ -39,7 +41,11 @@ public final class ShinseiBlocks {
 		blockCopperOre = new ShinseiOre(Material.rock).setBlockName("copper_ore");
 		GameRegistry.registerBlock(blockCopperOre, "copper_ore");
 		blockAluminumOre = new ShinseiOre(Material.rock).setBlockName("aluminum_ore");
-		GameRegistry.registerBlock(blockAluminumOre, "silver_ore");
+		GameRegistry.registerBlock(blockAluminumOre, "aluminum_ore");
+		blockCopperBlock = new ShinseiOre(Material.rock).setBlockName("copper_block");
+		GameRegistry.registerBlock(blockCopperBlock, "copper_block");
+		blockAluminumBlock = new ShinseiOre(Material.rock).setBlockName("aluminum_block");
+		GameRegistry.registerBlock(blockAluminumBlock, "aluminum_block");
 		
 		//Building Blocks
 		blockMarble = new BlockMarble().setBlockName("marble");
