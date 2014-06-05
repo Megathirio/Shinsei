@@ -3,6 +3,7 @@ package shinsei.blocks;
 import cpw.mods.fml.common.network.internal.FMLNetworkHandler;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import scala.util.Random;
 import shinsei.Main;
 import shinsei.lib.References;
 import shinsei.tileentity.TileEntityWoodFurnace;
@@ -113,8 +114,42 @@ public class WoodFurnace extends BlockContainer{
 		return new TileEntityWoodFurnace();
 	}
 
-	//TODO randomDisplayTick
+	@SideOnly(Side.CLIENT)
+	public void randomDisplayTick(World world, int x, int y, int z, Random random){
+		if(this.isActive){
+			int direction = world.getBlockMetadata(x, y, z);
+		
+		
+			float x1 = (float)x + 0.5F;
+			float y1 = (float)y + random.nextFloat();
+			float z1 = (float)z + 0.5F;
+		
+		
+			float f = 0.52F;
+			float f1 = random.nextFloat() * 0.6F - 0.3F;
+		
+			if(direction == 4){
+				world.spawnParticle("smoke", (double)(x1 - f), (double)(y1), (double)(z1 + f1), 0D, 0D, 0D);
+				world.spawnParticle("flame", (double)(x1 - f), (double)(y1), (double)(z1 + f1), 0D, 0D, 0D);
+			}
+		
+			if(direction == 5){
+				world.spawnParticle("smoke", (double)(x1 + f), (double)(y1), (double)(z1 + f1), 0D, 0D, 0D);
+				world.spawnParticle("flame", (double)(x1 + f), (double)(y1), (double)(z1 + f1), 0D, 0D, 0D);
+			}
 	
+			if(direction == 2){
+				world.spawnParticle("smoke", (double)(x1 + f1), (double)(y1), (double)(z1 - f), 0D, 0D, 0D);
+				world.spawnParticle("flame", (double)(x1 + f1), (double)(y1), (double)(z1 - f), 0D, 0D, 0D);
+			}
+		
+			if(direction == 3){
+				world.spawnParticle("smoke", (double)(x1 + f1), (double)(y1), (double)(z1 + f), 0D, 0D, 0D);
+				world.spawnParticle("flame", (double)(x1 + f1), (double)(y1), (double)(z1 + f), 0D, 0D, 0D);
+			}
+		
+		}
+	}
 	public void onBlockPlacedBy(World world, int x, int y, int z, EntityLivingBase entityplayer, ItemStack itemstack){
 		int l = MathHelper.floor_double((double)(entityplayer.rotationYaw*4.0F/360.F) + 0.5D) & 3;
 		

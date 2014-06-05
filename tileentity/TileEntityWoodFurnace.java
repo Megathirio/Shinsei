@@ -222,7 +222,7 @@ public class TileEntityWoodFurnace extends TileEntity implements ISidedInventory
 			
 			if(itemstack == null) return false;
 			if(this.slots[2] == null) return true;
-			if(this.slots[2].isItemEqual(itemstack)) return false;
+			if(!this.slots[2].isItemEqual(itemstack)) return false;
 			
 			int result = this.slots[2].stackSize + itemstack.stackSize;
 			
