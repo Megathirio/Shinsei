@@ -20,7 +20,7 @@ public class ShinseiRecipes {
 		GameRegistry.addRecipe(new ItemStack(Blocks.furnace, 1), "xxx","x x","xxx", 'x', ShinseiBlocks.blockLimestone);
 		GameRegistry.addRecipe(new ItemStack(ShinseiBlocks.blockCopperBlock, 1), "xxx","xxx","xxx", 'x', ShinseiItems.itemCopperIngot);
 		GameRegistry.addRecipe(new ItemStack(ShinseiBlocks.blockAluminumBlock, 1), "xxx","xxx","xxx", 'x', ShinseiItems.itemAluminumIngot);
-//		GameRegistry.addRecipe(new ItemStack(ShinseiItems.itemSplitWood, 2), "xy", 'x', Blocks.log, "y", Items.iron_axe);
+ 		//GameRegistry.addRecipe(new ItemStack(ShinseiItems.itemSplitWood, 2), "xy", 'x', Blocks.log, "y", Items.iron_axe);
 
 		//Tool Parts
 		GameRegistry.addRecipe(new ItemStack(ShinseiTools.itemWoodToolHandle, 1), "x  ","x  ","   ", 'x', Items.stick);

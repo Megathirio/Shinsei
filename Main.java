@@ -1,16 +1,11 @@
 package shinsei;
 
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Item.ToolMaterial;
-import net.minecraftforge.common.util.EnumHelper;
-import net.minecraftforge.oredict.OreDictionary;
 import shinsei.blocks.ShinseiBlocks;
 import shinsei.blocks.ShinseiMachines;
 import shinsei.core.handler.CraftingHandler;
 import shinsei.core.handler.FuelHandler;
+import shinsei.core.handler.GuiHandler;
 import shinsei.core.handler.ShinseiRecipes;
 import shinsei.core.proxy.CommonProxy;
 import shinsei.creativetab.ShinseiTab;
@@ -21,14 +16,19 @@ import shinsei.world.ShinseiWorldGen;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
+import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 @Mod(modid = References.MODID, name = References.MODNAME, version = References.VERSION)
 
 public class Main {
+	
+	@Instance(References.MODID)
+	public static Main instance;
 	
 	// Client and Server Proxies 
 	@SidedProxy(clientSide = References.CLIENTPROXYLOCATION, serverSide = References.COMMONPROXYLOCATION)
@@ -63,12 +63,16 @@ public class Main {
 	}
 	
 	@Mod.EventHandler
-	public static void init(FMLInitializationEvent event){
+	public void init(FMLInitializationEvent event){
 
-		//Fuel Handler Register
-		GameRegistry.registerFuelHandler(new FuelHandler());
+		//Crafting Handler Registration
+		FMLCommonHandler.instance().bus().register(new CraftingHandler());
 		
-		//FMLCommonHandler.instance().bus().register(new CraftingHandler());
+		//Gui Handler Registration 
+		NetworkRegistry.INSTANCE.registerGuiHandler(this, new GuiHandler());
+		
+		//Fuel Handler Registration
+		GameRegistry.registerFuelHandler(new FuelHandler());
 		
 		//Recipes Initialization
 		ShinseiRecipes.init();
