@@ -1,4 +1,6 @@
-package shinsei.items;
+package com.megathirio.shinsei.items;
+
+import com.megathirio.shinsei.creativetab.ShinseiTabs;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.item.Item;
@@ -191,93 +193,93 @@ public final class ShinseiTools {
 		
 
 	//Tool Parts		
-		itemWoodToolHandle = new ShinseiItem().setUnlocalizedName("wood_tool_handle");
+		itemWoodToolHandle = new ShinseiItem().setUnlocalizedName("wood_tool_handle").setCreativeTab(ShinseiTabs.toolsTab);
 		GameRegistry.registerItem(itemWoodToolHandle, "wood_tool_handle");
 		
 		
 		//Axes
-		itemAluminumAxeHead = new ShinseiItem().setUnlocalizedName("aluminum_axe_head");
+		itemAluminumAxeHead = new ShinseiItem().setUnlocalizedName("aluminum_axe_head").setCreativeTab(ShinseiTabs.toolsTab);
 		GameRegistry.registerItem(itemAluminumAxeHead, "aluminum_axe_head");
-		itemCopperAxeHead = new ShinseiItem().setUnlocalizedName("copper_axe_head");
+		itemCopperAxeHead = new ShinseiItem().setUnlocalizedName("copper_axe_head").setCreativeTab(ShinseiTabs.toolsTab);
 		GameRegistry.registerItem(itemCopperAxeHead, "copper_axe_head");
-		itemStoneAxeHead = new ShinseiItem().setUnlocalizedName("stone_axe_head");
+		itemStoneAxeHead = new ShinseiItem().setUnlocalizedName("stone_axe_head").setCreativeTab(ShinseiTabs.toolsTab);
 		GameRegistry.registerItem(itemStoneAxeHead, "stone_axe_head");
-		itemGoldAxeHead = new ShinseiItem().setUnlocalizedName("gold_axe_head");
+		itemGoldAxeHead = new ShinseiItem().setUnlocalizedName("gold_axe_head").setCreativeTab(ShinseiTabs.toolsTab);
 		GameRegistry.registerItem(itemGoldAxeHead, "gold_axe_head");
-		itemDiamondAxeHead = new ShinseiItem().setUnlocalizedName("diamond_axe_head");
+		itemDiamondAxeHead = new ShinseiItem().setUnlocalizedName("diamond_axe_head").setCreativeTab(ShinseiTabs.toolsTab);
 		GameRegistry.registerItem(itemDiamondAxeHead, "diamond_axe_head");
-		itemIronAxeHead = new ShinseiItem().setUnlocalizedName("iron_axe_head");
+		itemIronAxeHead = new ShinseiItem().setUnlocalizedName("iron_axe_head").setCreativeTab(ShinseiTabs.toolsTab);
 		GameRegistry.registerItem(itemIronAxeHead, "iron_axe_head");
-		itemWoodAxeHead = new ShinseiItem().setUnlocalizedName("wood_axe_head");
+		itemWoodAxeHead = new ShinseiItem().setUnlocalizedName("wood_axe_head").setCreativeTab(ShinseiTabs.toolsTab);
 		GameRegistry.registerItem(itemWoodAxeHead, "wood_axe_head");
 
 		
 		//Hoes
-		itemAluminumHoeHead = new ShinseiItem().setUnlocalizedName("aluminum_hoe_head");
+		itemAluminumHoeHead = new ShinseiItem().setUnlocalizedName("aluminum_hoe_head").setCreativeTab(ShinseiTabs.toolsTab);
 		GameRegistry.registerItem(itemAluminumHoeHead, "aluminum_hoe_head");
-		itemCopperHoeHead = new ShinseiItem().setUnlocalizedName("copper_hoe_head");
+		itemCopperHoeHead = new ShinseiItem().setUnlocalizedName("copper_hoe_head").setCreativeTab(ShinseiTabs.toolsTab);
 		GameRegistry.registerItem(itemCopperHoeHead, "copper_hoe_head");
-		itemStoneHoeHead = new ShinseiItem().setUnlocalizedName("stone_hoe_head");
+		itemStoneHoeHead = new ShinseiItem().setUnlocalizedName("stone_hoe_head").setCreativeTab(ShinseiTabs.toolsTab);
 		GameRegistry.registerItem(itemStoneHoeHead, "stone_hoe_head");
-		itemGoldHoeHead = new ShinseiItem().setUnlocalizedName("gold_hoe_head");
+		itemGoldHoeHead = new ShinseiItem().setUnlocalizedName("gold_hoe_head").setCreativeTab(ShinseiTabs.toolsTab);
 		GameRegistry.registerItem(itemGoldHoeHead, "gold_hoe_head");
-		itemDiamondHoeHead = new ShinseiItem().setUnlocalizedName("diamond_hoe_head");
+		itemDiamondHoeHead = new ShinseiItem().setUnlocalizedName("diamond_hoe_head").setCreativeTab(ShinseiTabs.toolsTab);
 		GameRegistry.registerItem(itemDiamondHoeHead, "diamond_hoe_head");
-		itemIronHoeHead = new ShinseiItem().setUnlocalizedName("iron_hoe_head");
+		itemIronHoeHead = new ShinseiItem().setUnlocalizedName("iron_hoe_head").setCreativeTab(ShinseiTabs.toolsTab);
 		GameRegistry.registerItem(itemIronHoeHead, "iron_hoe_head");
-		itemWoodHoeHead = new ShinseiItem().setUnlocalizedName("wood_hoe_head");
+		itemWoodHoeHead = new ShinseiItem().setUnlocalizedName("wood_hoe_head").setCreativeTab(ShinseiTabs.toolsTab);
 		GameRegistry.registerItem(itemWoodHoeHead, "wood_hoe_head");
 		
 		
 		//Pickaxes
-		itemAluminumPickaxeHead = new ShinseiItem().setUnlocalizedName("aluminum_pickaxe_head");
+		itemAluminumPickaxeHead = new ShinseiItem().setUnlocalizedName("aluminum_pickaxe_head").setCreativeTab(ShinseiTabs.toolsTab);
 		GameRegistry.registerItem(itemAluminumPickaxeHead, "aluminum_pickaxe_head");
-		itemCopperPickaxeHead = new ShinseiItem().setUnlocalizedName("copper_pickaxe_head");
+		itemCopperPickaxeHead = new ShinseiItem().setUnlocalizedName("copper_pickaxe_head").setCreativeTab(ShinseiTabs.toolsTab);
 		GameRegistry.registerItem(itemCopperPickaxeHead, "copper_pickaxe_head");
-		itemStonePickaxeHead = new ShinseiItem().setUnlocalizedName("stone_pickaxe_head");
+		itemStonePickaxeHead = new ShinseiItem().setUnlocalizedName("stone_pickaxe_head").setCreativeTab(ShinseiTabs.toolsTab);
 		GameRegistry.registerItem(itemStonePickaxeHead, "stone_pickaxe_head");
-		itemGoldPickaxeHead = new ShinseiItem().setUnlocalizedName("gold_pickaxe_head");
+		itemGoldPickaxeHead = new ShinseiItem().setUnlocalizedName("gold_pickaxe_head").setCreativeTab(ShinseiTabs.toolsTab);
 		GameRegistry.registerItem(itemGoldPickaxeHead, "gold_pickaxe_head");
-		itemDiamondPickaxeHead = new ShinseiItem().setUnlocalizedName("diamond_pickaxe_head");
+		itemDiamondPickaxeHead = new ShinseiItem().setUnlocalizedName("diamond_pickaxe_head").setCreativeTab(ShinseiTabs.toolsTab);
 		GameRegistry.registerItem(itemDiamondPickaxeHead, "diamond_pickaxe_head");
-		itemIronPickaxeHead = new ShinseiItem().setUnlocalizedName("iron_pickaxe_head");
+		itemIronPickaxeHead = new ShinseiItem().setUnlocalizedName("iron_pickaxe_head").setCreativeTab(ShinseiTabs.toolsTab);
 		GameRegistry.registerItem(itemIronPickaxeHead, "iron_pickaxe_head");
-		itemWoodPickaxeHead = new ShinseiItem().setUnlocalizedName("wood_pickaxe_head");
+		itemWoodPickaxeHead = new ShinseiItem().setUnlocalizedName("wood_pickaxe_head").setCreativeTab(ShinseiTabs.toolsTab);
 		GameRegistry.registerItem(itemWoodPickaxeHead, "wood_pickaxe_head");
 
 		
 		//Shovels
-		itemAluminumShovelHead = new ShinseiItem().setUnlocalizedName("aluminum_shovel_head");
+		itemAluminumShovelHead = new ShinseiItem().setUnlocalizedName("aluminum_shovel_head").setCreativeTab(ShinseiTabs.toolsTab);
 		GameRegistry.registerItem(itemAluminumShovelHead, "aluminum_shovel_head");
-		itemCopperShovelHead = new ShinseiItem().setUnlocalizedName("copper_shovel_head");
+		itemCopperShovelHead = new ShinseiItem().setUnlocalizedName("copper_shovel_head").setCreativeTab(ShinseiTabs.toolsTab);
 		GameRegistry.registerItem(itemCopperShovelHead, "copper_shovel_head");
-		itemStoneShovelHead = new ShinseiItem().setUnlocalizedName("stone_shovel_head");
+		itemStoneShovelHead = new ShinseiItem().setUnlocalizedName("stone_shovel_head").setCreativeTab(ShinseiTabs.toolsTab);
 		GameRegistry.registerItem(itemStoneShovelHead, "stone_shovel_head");
-		itemGoldShovelHead = new ShinseiItem().setUnlocalizedName("gold_shovel_head");
+		itemGoldShovelHead = new ShinseiItem().setUnlocalizedName("gold_shovel_head").setCreativeTab(ShinseiTabs.toolsTab);
 		GameRegistry.registerItem(itemGoldShovelHead, "gold_shovel_head");
-		itemDiamondShovelHead = new ShinseiItem().setUnlocalizedName("diamond_shovel_head");
+		itemDiamondShovelHead = new ShinseiItem().setUnlocalizedName("diamond_shovel_head").setCreativeTab(ShinseiTabs.toolsTab);
 		GameRegistry.registerItem(itemDiamondShovelHead, "diamond_shovel_head");
-		itemIronShovelHead = new ShinseiItem().setUnlocalizedName("iron_shovel_head");
+		itemIronShovelHead = new ShinseiItem().setUnlocalizedName("iron_shovel_head").setCreativeTab(ShinseiTabs.toolsTab);
 		GameRegistry.registerItem(itemIronShovelHead, "iron_shovel_head");
-		itemWoodShovelHead = new ShinseiItem().setUnlocalizedName("wood_shovel_head");
+		itemWoodShovelHead = new ShinseiItem().setUnlocalizedName("wood_shovel_head").setCreativeTab(ShinseiTabs.toolsTab);
 		GameRegistry.registerItem(itemWoodShovelHead, "wood_shovel_head");
 
 		
 		
 		//Swords
-		itemAluminumSwordBlade = new ShinseiItem().setUnlocalizedName("aluminum_sword_blade");
+		itemAluminumSwordBlade = new ShinseiItem().setUnlocalizedName("aluminum_sword_blade").setCreativeTab(ShinseiTabs.toolsTab);
 		GameRegistry.registerItem(itemAluminumSwordBlade, "aluminum_sword_blade");
-		itemCopperSwordBlade = new ShinseiItem().setUnlocalizedName("copper_sword_blade");
+		itemCopperSwordBlade = new ShinseiItem().setUnlocalizedName("copper_sword_blade").setCreativeTab(ShinseiTabs.toolsTab);
 		GameRegistry.registerItem(itemCopperSwordBlade, "copper_sword_blade");
-		itemStoneSwordBlade = new ShinseiItem().setUnlocalizedName("stone_sword_blade");
+		itemStoneSwordBlade = new ShinseiItem().setUnlocalizedName("stone_sword_blade").setCreativeTab(ShinseiTabs.toolsTab);
 		GameRegistry.registerItem(itemStoneSwordBlade, "stone_sword_blade");
-		itemGoldSwordBlade = new ShinseiItem().setUnlocalizedName("gold_sword_blade");
+		itemGoldSwordBlade = new ShinseiItem().setUnlocalizedName("gold_sword_blade").setCreativeTab(ShinseiTabs.toolsTab);
 		GameRegistry.registerItem(itemGoldSwordBlade, "gold_sword_blade");
-		itemDiamondSwordBlade = new ShinseiItem().setUnlocalizedName("diamond_sword_blade");
+		itemDiamondSwordBlade = new ShinseiItem().setUnlocalizedName("diamond_sword_blade").setCreativeTab(ShinseiTabs.toolsTab);
 		GameRegistry.registerItem(itemDiamondSwordBlade, "diamond_sword_blade");
-		itemIronSwordBlade = new ShinseiItem().setUnlocalizedName("iron_sword_blade");
+		itemIronSwordBlade = new ShinseiItem().setUnlocalizedName("iron_sword_blade").setCreativeTab(ShinseiTabs.toolsTab);
 		GameRegistry.registerItem(itemIronSwordBlade, "iron_sword_blade");
-		itemWoodSwordBlade = new ShinseiItem().setUnlocalizedName("wood_sword_blade");
+		itemWoodSwordBlade = new ShinseiItem().setUnlocalizedName("wood_sword_blade").setCreativeTab(ShinseiTabs.toolsTab);
 		GameRegistry.registerItem(itemWoodSwordBlade, "wood_sword_blade");
 		
 		

@@ -1,6 +1,6 @@
-package shinsei.core.handler;
+package com.megathirio.shinsei.core.handler;
 
-import shinsei.items.ShinseiTools;
+import com.megathirio.shinsei.items.ShinseiTools;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
 import cpw.mods.fml.common.gameevent.PlayerEvent.ItemCraftedEvent;
@@ -8,7 +8,6 @@ import cpw.mods.fml.common.gameevent.PlayerEvent.ItemCraftedEvent;
 
 public class CraftingHandler {
 	
-	@SuppressWarnings("unused")
 	public void onCrafting(ItemCraftedEvent event){
 		
 		final IInventory craftMatrix = null;

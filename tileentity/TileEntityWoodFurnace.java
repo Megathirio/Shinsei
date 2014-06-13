@@ -1,8 +1,8 @@
-package shinsei.tileentity;
+package com.megathirio.shinsei.tileentity;
 
-import shinsei.blocks.WoodFurnace;
-import shinsei.items.ShinseiItems;
-import shinsei.items.ShinseiTools;
+import com.megathirio.shinsei.blocks.WoodFurnace;
+import com.megathirio.shinsei.items.ShinseiItems;
+import com.megathirio.shinsei.items.ShinseiTools;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.player.EntityPlayer;
@@ -22,7 +22,7 @@ import net.minecraft.tileentity.TileEntity;
 
 public class TileEntityWoodFurnace extends TileEntity implements ISidedInventory{
 
-	private String localizedName;
+	private String customName;
 	
 	private static final int[] slots_top = new int[]{0};
 	private static final int[] slots_bottom = new int[]{2, 1};
@@ -38,17 +38,17 @@ public class TileEntityWoodFurnace extends TileEntity implements ISidedInventory
 	
 	public void setGuiDisplayName(String displayName){
 		
-		this.localizedName = displayName;
+		this.customName = displayName;
 	}
 	
 	public String getInventoryName(){
 		
-		return this.hasCustomInventoryName() ? this.localizedName : "container.woodfurnace";
+		return this.hasCustomInventoryName() ? this.customName : "container.woodFurnace";
 	}
 
 	public boolean hasCustomInventoryName() {
 
-		return this.localizedName != null && this.localizedName.length() > 0;
+		return this.customName != null && this.customName.length() > 0;
 	}
 	
 	public int getSizeInventory(){
@@ -300,7 +300,7 @@ public class TileEntityWoodFurnace extends TileEntity implements ISidedInventory
 		this.currentItemBurnTime = (int)nbt.getShort("CurrentBurnTime");
 
 		if(nbt.hasKey("CustomName")) {
-			this.localizedName = nbt.getString("CustomName");
+			this.customName = nbt.getString("CustomName");
 		}
 	}
 
@@ -325,7 +325,7 @@ public class TileEntityWoodFurnace extends TileEntity implements ISidedInventory
 		nbt.setTag("Items", list);
 
 		if (this.hasCustomInventoryName()) {
-			nbt.setString("CustomName", this.localizedName);
+			nbt.setString("CustomName", this.customName);
 		}
 	}
 }

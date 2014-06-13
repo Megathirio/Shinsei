@@ -1,8 +1,8 @@
-package shinsei.core.container;
+package com.megathirio.shinsei.core.container;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import shinsei.tileentity.TileEntityWoodFurnace;
+import com.megathirio.shinsei.tileentity.TileEntityWoodFurnace;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;
@@ -24,19 +24,21 @@ public class ContainerWoodFurnace extends Container{
 		
 		this.woodFurnace = tileentity;
 
-		this.addSlotToContainer(new Slot(tileentity, 0,  56, 35));
-		this.addSlotToContainer(new Slot(tileentity, 1,  33, 53));
-		this.addSlotToContainer(new SlotFurnace(inventory.player, tileentity, 2,  116, 35));
-		//this.addSlotToContainer(new Slot(tileentity, 3,  8, 17));
-		//this.addSlotToContainer(new Slot(tileentity, 4,  8, 35));
-		//this.addSlotToContainer(new Slot(tileentity, 5,  8, 53));
+		this.addSlotToContainer(new Slot(tileentity, 0,  85, 36));//input slot
+		this.addSlotToContainer(new Slot(tileentity, 1,  35, 53));//fuel slot
+		this.addSlotToContainer(new SlotFurnace(inventory.player, tileentity, 2,  143, 35));//output slot
+		//this.addSlotToContainer(new Slot(tileentity, 3,  8, 17));//upgrade slot 1
+		//this.addSlotToContainer(new Slot(tileentity, 4,  8, 35));//upgrade slot 2
+		//this.addSlotToContainer(new Slot(tileentity, 5,  8, 53));//upgrade slot 3
 		
+		//Inventory Slots
 		for(int i = 0; i < 3; i++){
 			for(int j = 0; j < 9; j++){
 				this.addSlotToContainer(new Slot(inventory, j + i * 9 + 9, 8 + j * 18, 84 + i * 18));
 			}
 		}
 		
+		//Hotbar Slots
 		for(int i = 0; i < 9; i++){
 			this.addSlotToContainer(new Slot(inventory, i, 8 + i * 18, 142));
 		}

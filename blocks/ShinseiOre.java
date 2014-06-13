@@ -1,10 +1,12 @@
-package shinsei.blocks;
+package com.megathirio.shinsei.blocks;
 
 import java.util.Random;
 
-import shinsei.Main;
-import shinsei.items.ShinseiItems;
-import shinsei.lib.References;
+import com.megathirio.shinsei.Main;
+import com.megathirio.shinsei.creativetab.ShinseiTabs;
+import com.megathirio.shinsei.items.ShinseiItems;
+import com.megathirio.shinsei.lib.References;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
@@ -19,7 +21,7 @@ public class ShinseiOre extends Block{
 
 		this.setHardness(1f);
 		this.setResistance(3f);
-		this.setCreativeTab(Main.getCreativeTab());
+		setCreativeTab(ShinseiTabs.blocksTab);
 		this.setStepSound(soundTypeStone);
 		this.enableStats = true;
 	}

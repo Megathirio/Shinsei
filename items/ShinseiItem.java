@@ -1,7 +1,9 @@
-package shinsei.items;
+package com.megathirio.shinsei.items;
 
-import shinsei.Main;
-import shinsei.lib.References;
+import com.megathirio.shinsei.Main;
+import com.megathirio.shinsei.creativetab.ShinseiTabs;
+import com.megathirio.shinsei.lib.References;
+
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.renderer.texture.IIconRegister;
@@ -12,7 +14,7 @@ public class ShinseiItem extends Item {
 	//Default Item Properties
 	public ShinseiItem(){
 		
-		setCreativeTab(Main.getCreativeTab());
+		setCreativeTab(ShinseiTabs.itemsTab);
 		
 	}
 	

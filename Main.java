@@ -1,18 +1,21 @@
-package shinsei;
+package com.megathirio.shinsei;
 
 import net.minecraft.creativetab.CreativeTabs;
-import shinsei.blocks.ShinseiBlocks;
-import shinsei.blocks.ShinseiMachines;
-import shinsei.core.handler.CraftingHandler;
-import shinsei.core.handler.FuelHandler;
-import shinsei.core.handler.GuiHandler;
-import shinsei.core.handler.ShinseiRecipes;
-import shinsei.core.proxy.CommonProxy;
-import shinsei.creativetab.ShinseiTab;
-import shinsei.items.ShinseiItems;
-import shinsei.items.ShinseiTools;
-import shinsei.lib.References;
-import shinsei.world.ShinseiWorldGen;
+
+import com.megathirio.shinsei.blocks.ShinseiBlocks;
+import com.megathirio.shinsei.blocks.ShinseiMachines;
+import com.megathirio.shinsei.core.handler.CraftingHandler;
+import com.megathirio.shinsei.core.handler.FuelHandler;
+import com.megathirio.shinsei.core.handler.GuiHandler;
+import com.megathirio.shinsei.core.proxy.CommonProxy;
+import com.megathirio.shinsei.crafting.ShinseiRecipes;
+import com.megathirio.shinsei.creativetab.ShinseiTabs;
+import com.megathirio.shinsei.items.ShinseiIngots;
+import com.megathirio.shinsei.items.ShinseiItems;
+import com.megathirio.shinsei.items.ShinseiTools;
+import com.megathirio.shinsei.lib.References;
+import com.megathirio.shinsei.world.ShinseiWorldGen;
+
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
@@ -26,24 +29,22 @@ import cpw.mods.fml.common.registry.GameRegistry;
 @Mod(modid = References.MODID, name = References.MODNAME, version = References.VERSION)
 
 public class Main {
-	
+
+	public static final String modid = "shinsei";
 	@Instance(References.MODID)
 	public static Main instance;
 	
 	// Client and Server Proxies 
 	@SidedProxy(clientSide = References.CLIENTPROXYLOCATION, serverSide = References.COMMONPROXYLOCATION)
 	public static CommonProxy proxy;
-	
-	//Creative Tabs
-	private static CreativeTabs shinseiTab = new ShinseiTab(CreativeTabs.getNextID(), References.MODID);
 
-	public static CreativeTabs getCreativeTab(){
-		return(shinseiTab);
-	}
 	
 	//Initialization Methods
 	@Mod.EventHandler
 	public static void preInit(FMLPreInitializationEvent event){
+		
+		//Creative Tabs Initialization
+		ShinseiTabs.init();
 
 		//Block Initialization
 		ShinseiBlocks.init();
@@ -54,12 +55,17 @@ public class Main {
 		//Item Initialization
 		ShinseiItems.init();
 
+		//Item Initialization
+		ShinseiIngots.init();
+
 		//Tools Initialization
 		ShinseiTools.init();
 
 		//WorldGen Registry
 		GameRegistry.registerWorldGenerator(new ShinseiWorldGen(), 1);
-
+		
+		//Renderers
+		proxy.registerRenderThings();
 	}
 	
 	@Mod.EventHandler
@@ -76,12 +82,9 @@ public class Main {
 		
 		//Recipes Initialization
 		ShinseiRecipes.init();
-
 	}
 
 	@Mod.EventHandler
 	public static void postInit(FMLPostInitializationEvent event){
-		
 	}
-
 }

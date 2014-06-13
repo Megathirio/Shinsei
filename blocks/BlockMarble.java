@@ -1,9 +1,11 @@
-package shinsei.blocks;
+package com.megathirio.shinsei.blocks;
 
 import java.util.List;
 
-import shinsei.Main;
-import shinsei.lib.References;
+import com.megathirio.shinsei.Main;
+import com.megathirio.shinsei.creativetab.ShinseiTabs;
+import com.megathirio.shinsei.lib.References;
+
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
@@ -29,8 +31,7 @@ public class BlockMarble extends Block{
 		super(Material.rock);
 		setHardness(5f);
 		setResistance(8f);
-		setCreativeTab(Main.getCreativeTab());
-		
+		setCreativeTab(ShinseiTabs.blocksTab);
 	}
 	
 	//MetaBlock Texture Setup
@@ -39,11 +40,8 @@ public class BlockMarble extends Block{
 	public void registerBlockIcons(IIconRegister iconRegister){
 		
 		texture = new IIcon[subBlocks.length];
-		
 		for(int i = 0; i < subBlocks.length; i++){
-			
 			texture[i] = iconRegister.registerIcon(References.MODID + ":" + "marble_" + subBlocks[i]);
-
 		}
 	}
 	
@@ -52,8 +50,7 @@ public class BlockMarble extends Block{
 	@SideOnly(Side.CLIENT)
 	public void getSubBlocks(Item block, CreativeTabs creativeTabs, List list){
 		
-		for(int i = 0; i < subBlocks.length; i++){
-			
+		for(int i = 0; i < subBlocks.length; i++){	
 			list.add(new ItemStack(block, 1, i));
 		}
 	}
@@ -69,7 +66,5 @@ public class BlockMarble extends Block{
 	public int damageDropped(int meta){
 		
 		return meta;
-		
 	}
-	
 }

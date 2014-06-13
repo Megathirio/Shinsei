@@ -1,8 +1,8 @@
-package shinsei.world;
+package com.megathirio.shinsei.world;
 
 import java.util.Random;
 
-import shinsei.blocks.ShinseiBlocks;
+import com.megathirio.shinsei.blocks.ShinseiBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
@@ -38,11 +38,11 @@ public class ShinseiWorldGen implements IWorldGenerator{
 	}
 
 	public void generateSurface(Random random, int chunkX, int chunkZ, World world) {
-		
-		addOreSpawn(ShinseiBlocks.blockClaystone, world, random, chunkX, chunkZ, 4, 16, 25, 0, 256);
-		addOreSpawn(ShinseiBlocks.blockLimestone, world, random, chunkX, chunkZ, 8, 32, 25, 35, 256);
-		addOreSpawn(ShinseiBlocks.blockCopperOre, world, random, chunkX, chunkZ, 8, 32, 25, 0, 256);
-		addOreSpawn(ShinseiBlocks.blockAluminumOre, world, random, chunkX, chunkZ, 8, 32, 25, 0, 256);
+		//addOreSpawn(Block name, world, random, X Pos, Z Pos, Min Vein Size, Max Vein Size, Spawn Chances, Min Y Pos, Max Y Pos); 
+		addOreSpawn(ShinseiBlocks.blockClaystone, world, random, chunkX, chunkZ, 8, 16, 12, 65, 256);
+		addOreSpawn(ShinseiBlocks.blockLimestone, world, random, chunkX, chunkZ, 16, 32, 20, 45, 256);
+		addOreSpawn(ShinseiBlocks.blockCopperOre, world, random, chunkX, chunkZ, 4, 12, 12, 0, 64);
+		addOreSpawn(ShinseiBlocks.blockBauxiteOre, world, random, chunkX, chunkZ, 4, 16, 20, 0, 256);
 	}
 
 	public void addOreSpawn(Block block, World world, Random random,

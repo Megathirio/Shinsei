@@ -1,4 +1,4 @@
-package shinsei.items;
+package com.megathirio.shinsei.items;
 
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraftforge.common.util.EnumHelper;
@@ -16,11 +16,13 @@ public class ShinseiMaterials {
 	*/
 
 	public static ToolMaterial materialAluminum = EnumHelper.addToolMaterial("materialAluminum", 2, 175, 5.0F, 1.5F, 16);
+	public static ToolMaterial materialCopper = EnumHelper.addToolMaterial("materialCopper", 2, 200, 6.0F, 1.5F, 16);
+	
+	/*
 	public static ToolMaterial materialBrass = EnumHelper.addToolMaterial("materialBrass", 2, 250, 6.5F, 2.5F, 16);
 	public static ToolMaterial materialCarbonFibre = EnumHelper.addToolMaterial("materialCarbonFibre", 3, 1250, 7.0F, 3.0F, 10);
 	public static ToolMaterial materialChromium = EnumHelper.addToolMaterial("materialChromium", 2, 500, 7.0F, 3.0F, 14);
 	public static ToolMaterial materialCobalt = EnumHelper.addToolMaterial("materialCobalt", 2, 300, 6.0F, 2.5F, 14);
-	public static ToolMaterial materialCopper = EnumHelper.addToolMaterial("materialCopper", 2, 200, 6.0F, 1.5F, 16);
 	public static ToolMaterial materialLead = EnumHelper.addToolMaterial("materialLead", 1, 150, 3.0F, 1.5F, 6);
 	public static ToolMaterial materialNickel = EnumHelper.addToolMaterial("materialNickel", 2, 200, 6.0F, 2.0F, 15);
 	public static ToolMaterial materialOpal = EnumHelper.addToolMaterial("materialOpal", 2, 250, 6.0F, 3.0F, 20);
@@ -39,6 +41,6 @@ public class ShinseiMaterials {
 	public static ToolMaterial materialTungsten = EnumHelper.addToolMaterial("materialTungsten", 2, 500, 6.5F, 3.0F, 8);
 	public static ToolMaterial materialTungstenCarbide = EnumHelper.addToolMaterial("materialTungstenCarbide", 3, 1550, 7.5F, 4.0F, 8);
 	public static ToolMaterial materialZinc = EnumHelper.addToolMaterial("materialZinc", 2, 200, 5.5F, 1.0F, 20);
-
+*/
 
 }
