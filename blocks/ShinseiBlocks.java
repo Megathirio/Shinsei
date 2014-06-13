@@ -14,9 +14,11 @@ public final class ShinseiBlocks {
 
 //Block Variables
 	//Native Element Minerals
+	public static Block blockArsenicOre;
 	public static Block blockBauxiteOre;
 	public static Block blockCopperOre;
 	public static Block blockStibniteOre;	
+
 	//Resource Blocks
 	public static Block blockAntimonyBlock;
 	public static Block blockAluminumBlock;
@@ -44,6 +46,10 @@ public final class ShinseiBlocks {
 		blockStibniteOre = new ShinseiOre(Material.rock).setBlockName("stibnite_ore");
 		GameRegistry.registerBlock(blockStibniteOre, "stibnite_ore");
 		OreDictionary.registerOre("oreAntimony", new ItemStack(blockStibniteOre));
+		//Arsenic
+		blockArsenicOre = new ShinseiOre(Material.rock).setBlockName("arsenic_ore").setLightLevel(.825F);
+		GameRegistry.registerBlock(blockArsenicOre, "arsenic_ore");
+		OreDictionary.registerOre("oreArsenic", new ItemStack(blockArsenicOre));
 		
 
 		blockCopperOre = new ShinseiOre(Material.rock).setBlockName("copper_ore");

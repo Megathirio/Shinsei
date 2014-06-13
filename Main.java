@@ -10,6 +10,7 @@ import com.megathirio.shinsei.core.handler.GuiHandler;
 import com.megathirio.shinsei.core.proxy.CommonProxy;
 import com.megathirio.shinsei.crafting.ShinseiRecipes;
 import com.megathirio.shinsei.creativetab.ShinseiTabs;
+import com.megathirio.shinsei.items.ShinseiDusts;
 import com.megathirio.shinsei.items.ShinseiIngots;
 import com.megathirio.shinsei.items.ShinseiItems;
 import com.megathirio.shinsei.items.ShinseiTools;
@@ -57,6 +58,9 @@ public class Main {
 
 		//Item Initialization
 		ShinseiIngots.init();
+
+		//Dusts Initialization
+		ShinseiDusts.init();
 
 		//Tools Initialization
 		ShinseiTools.init();
