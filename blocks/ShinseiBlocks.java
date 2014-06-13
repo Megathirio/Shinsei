@@ -16,8 +16,9 @@ public final class ShinseiBlocks {
 	//Native Element Minerals
 	public static Block blockBauxiteOre;
 	public static Block blockCopperOre;
-	
+	public static Block blockStibniteOre;	
 	//Resource Blocks
+	public static Block blockAntimonyBlock;
 	public static Block blockAluminumBlock;
 	public static Block blockCopperBlock;
 	
@@ -39,7 +40,16 @@ public final class ShinseiBlocks {
 		blockBauxiteOre = new ShinseiOre(Material.rock).setBlockName("bauxite_ore");
 		GameRegistry.registerBlock(blockBauxiteOre, "bauxite_ore");
 		OreDictionary.registerOre("oreAluminum", new ItemStack(blockBauxiteOre));
+		//Stibnite(Antimony) is processed in Furnaces
+		blockStibniteOre = new ShinseiOre(Material.rock).setBlockName("stibnite_ore");
+		GameRegistry.registerBlock(blockStibniteOre, "stibnite_ore");
+		OreDictionary.registerOre("oreAntimony", new ItemStack(blockStibniteOre));
 		
+
+		blockCopperOre = new ShinseiOre(Material.rock).setBlockName("copper_ore");
+		GameRegistry.registerBlock(blockCopperOre, "copper_ore");
+		OreDictionary.registerOre("oreCopper", new ItemStack(blockCopperOre));
+
 		//Mineral Blocks
 		blockClaystone = new ShinseiOre(Material.rock).setBlockName("claystone").setResistance(2F).setHardness(0.5F);
 		blockClaystone.setHarvestLevel("shovel", 0);
@@ -53,14 +63,15 @@ public final class ShinseiBlocks {
 		//Resource Blocks
 		blockAluminumBlock = new ShinseiOre(Material.rock).setBlockName("aluminum_block");
 		GameRegistry.registerBlock(blockAluminumBlock, "aluminum_block");
+		OreDictionary.registerOre("blockAluminum", new ItemStack(blockAluminumBlock));
+
+		blockAntimonyBlock = new ShinseiOre(Material.rock).setBlockName("antimony_block");
+		GameRegistry.registerBlock(blockAntimonyBlock, "antimony_block");
+		OreDictionary.registerOre("blockAntimony", new ItemStack(blockAntimonyBlock));
 
 		blockCopperBlock = new ShinseiOre(Material.rock).setBlockName("copper_block");
 		GameRegistry.registerBlock(blockCopperBlock, "copper_block");
-		blockCopperOre = new ShinseiOre(Material.rock).setBlockName("copper_ore");
-		GameRegistry.registerBlock(blockCopperOre, "copper_ore");
-		OreDictionary.registerOre("oreCopper", new ItemStack(blockCopperOre));
 
-		//Aluminum
 		//Brass - alloy of copper + zinc
 		//Bronze - alloy of copper + tin
 		//Carbon Fibre - composite of epoxy or nylon + aluminum + glass + carbon

@@ -93,7 +93,7 @@ public class ShinseiRecipes {
 			// Smelting
 			GameRegistry.addSmelting(ShinseiBlocks.blockLimestone, new ItemStack(ShinseiBlocks.blockMarble), 1f);
 			GameRegistry.addSmelting(ShinseiBlocks.blockCopperOre, new ItemStack(ShinseiIngots.itemCopperIngot), 1f);
-			GameRegistry.addSmelting(ShinseiBlocks.blockBauxiteOre, new ItemStack(ShinseiIngots.itemAluminumIngot), 1f);
+			GameRegistry.addSmelting(ShinseiBlocks.blockStibniteOre, new ItemStack(ShinseiIngots.itemAntimonyIngot), 1f);
 
 	}
 

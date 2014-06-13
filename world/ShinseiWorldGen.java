@@ -41,8 +41,9 @@ public class ShinseiWorldGen implements IWorldGenerator{
 		//addOreSpawn(Block name, world, random, X Pos, Z Pos, Min Vein Size, Max Vein Size, Spawn Chances, Min Y Pos, Max Y Pos); 
 		addOreSpawn(ShinseiBlocks.blockClaystone, world, random, chunkX, chunkZ, 8, 16, 12, 65, 256);
 		addOreSpawn(ShinseiBlocks.blockLimestone, world, random, chunkX, chunkZ, 16, 32, 20, 45, 256);
-		addOreSpawn(ShinseiBlocks.blockCopperOre, world, random, chunkX, chunkZ, 4, 12, 12, 0, 64);
 		addOreSpawn(ShinseiBlocks.blockBauxiteOre, world, random, chunkX, chunkZ, 4, 16, 20, 0, 256);
+		addOreSpawn(ShinseiBlocks.blockStibniteOre, world, random, chunkX, chunkZ, 2, 8, 20, 0, 128);
+		addOreSpawn(ShinseiBlocks.blockCopperOre, world, random, chunkX, chunkZ, 4, 12, 12, 0, 64);
 	}
 
 	public void addOreSpawn(Block block, World world, Random random,
