@@ -29,6 +29,7 @@ public class ShinseiRecipes {
 			GameRegistry.addRecipe(new ItemStack(ShinseiMachines.blockForgeFurnaceIdle, 1), "@@@","@#@","$$$", '@', Blocks.brick_block, '#', Blocks.iron_bars, '$', Items.iron_ingot);
 			GameRegistry.addRecipe(new ItemStack(ShinseiMachines.blockToolBench, 1), "@@@","# #","# #", '@', Blocks.planks, '#', Items.stick);
 			GameRegistry.addRecipe(new ItemStack(Blocks.furnace, 1), "@@@","@ @","@@@", '@', ShinseiBlocks.blockLimestone);
+			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ShinseiMachines.blockMachinePress, 1), " @ ","@@@","@ @", '@', "ingotIron"));
 			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ShinseiBlocks.blockCopperBlock, 1), "@@@","@@@","@@@", '@', "ingotCopper"));
 			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ShinseiBlocks.blockAluminumBlock, 1), "@@@","@@@","@@@", '@', "ingotAluminum"));
 

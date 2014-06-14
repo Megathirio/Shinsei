@@ -7,18 +7,42 @@ import net.minecraftforge.oredict.OreDictionary;
 
 public final class ShinseiItems {
 
-	//Item Variables
-		//Fuels
-		public static Item itemSplitWood;
+//Item Variables
+	//Casts
+	public static Item itemAxeCast;
+	public static Item itemHoeCast;
+	public static Item itemPickaxeCast;
+	public static Item itemShovelCast;
+	public static Item itemSwordCast;
+
+	//Fuels
+	public static Item itemSplitWood;
 	
 	
-		//Mineral Drops
-		public static Item itemLimestoneShard;
-		public static Item itemSilt;
-//Item Initialization
+	//Mineral Drops
+	public static Item itemLimestoneShard;
+	public static Item itemSilt;
+	
+	//Item Initialization
 	public static void init(){
 		
 	//Item Initialzation
+		//Casts
+		itemAxeCast = new ShinseiItem().setUnlocalizedName("axe_cast");
+		GameRegistry.registerItem(itemAxeCast, "axe_cast");
+
+		itemHoeCast = new ShinseiItem().setUnlocalizedName("hoe_cast");
+		GameRegistry.registerItem(itemHoeCast, "hoe_cast");
+
+		itemPickaxeCast = new ShinseiItem().setUnlocalizedName("pickaxe_cast");
+		GameRegistry.registerItem(itemPickaxeCast, "pickaxe_cast");
+
+		itemShovelCast = new ShinseiItem().setUnlocalizedName("shovel_cast");
+		GameRegistry.registerItem(itemShovelCast, "shovel_cast");
+
+		itemSwordCast = new ShinseiItem().setUnlocalizedName("sword_cast");
+		GameRegistry.registerItem(itemSwordCast, "sword_cast");
+
 		//Fuels
 		itemSplitWood = new ShinseiItem().setUnlocalizedName("split_wood");
 		GameRegistry.registerItem(itemSplitWood, "split_wood");
