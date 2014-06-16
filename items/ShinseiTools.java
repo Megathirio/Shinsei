@@ -8,7 +8,15 @@ import net.minecraft.item.Item;
 public final class ShinseiTools {
 
 //Tool Variables
-//Tool Parts
+	//Casts
+	public static Item itemCopperPlate;
+	public static Item itemAxeCast;
+	public static Item itemHoeCast;
+	public static Item itemPickaxeCast;
+	public static Item itemShovelCast;
+	public static Item itemSwordCast;
+
+	//Tool Parts
 	public static Item itemWoodToolHandle;
 	
 	//Axes
@@ -191,8 +199,27 @@ public final class ShinseiTools {
 	//Tool Initialization
 	public static void init(){
 		
+		//Casts
+		itemCopperPlate = new ShinseiItem().setUnlocalizedName("copper_plate");
+		GameRegistry.registerItem(itemCopperPlate, "copper_plate");
 
-	//Tool Parts		
+		itemAxeCast = new ShinseiItem().setUnlocalizedName("axe_cast");
+		GameRegistry.registerItem(itemAxeCast, "axe_cast");
+
+		itemHoeCast = new ShinseiItem().setUnlocalizedName("hoe_cast");
+		GameRegistry.registerItem(itemHoeCast, "hoe_cast");
+
+		itemPickaxeCast = new ShinseiItem().setUnlocalizedName("pickaxe_cast");
+		GameRegistry.registerItem(itemPickaxeCast, "pickaxe_cast");
+
+		itemShovelCast = new ShinseiItem().setUnlocalizedName("shovel_cast");
+		GameRegistry.registerItem(itemShovelCast, "shovel_cast");
+
+		itemSwordCast = new ShinseiItem().setUnlocalizedName("sword_cast");
+		GameRegistry.registerItem(itemSwordCast, "sword_cast");
+
+
+		//Tool Parts		
 		itemWoodToolHandle = new ShinseiItem().setUnlocalizedName("wood_tool_handle").setCreativeTab(ShinseiTabs.toolsTab);
 		GameRegistry.registerItem(itemWoodToolHandle, "wood_tool_handle");
 		

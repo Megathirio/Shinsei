@@ -6,7 +6,7 @@ import net.minecraft.item.ItemStack;
 
 public class ItemMarbleBlock extends ItemBlockWithMetadata{
 
-	final static String[] subBlocks = new String[] {"black", "blue", "brown", "cyan", "gray", "green", "light_blue", "lime", "magenta", "orange", "pink", "purple", "red", "silver", "white", "yellow"};
+	final static String[] subBlocks = new String[] {"white", "black", "blue", "brown", "cyan", "gray", "green", "light_blue", "lime", "magenta", "orange", "pink", "purple", "red", "silver", "yellow"};
 
 	public ItemMarbleBlock(Block block) {
 		super(block, block);

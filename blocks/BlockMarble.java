@@ -23,7 +23,7 @@ public class BlockMarble extends Block{
 	private IIcon[] texture;
 	
 	//MetaBlock variables
-	final static String[] subBlocks = new String[] {"black", "blue", "brown", "cyan", "gray", "green", "light_blue", "lime", "magenta", "orange", "pink", "purple", "red", "silver", "white", "yellow"};
+	final static String[] subBlocks = new String[] {"white", "black", "blue", "brown", "cyan", "gray", "green", "light_blue", "lime", "magenta", "orange", "pink", "purple", "red", "silver", "yellow"};
 
 	public BlockMarble(){
 		

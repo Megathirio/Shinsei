@@ -5,6 +5,7 @@ import com.megathirio.shinsei.items.ItemMarbleBlock;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraftforge.common.util.EnumHelper;
@@ -62,6 +63,7 @@ public final class ShinseiBlocks {
 		GameRegistry.registerBlock(blockClaystone, "claystone");		 
 		blockLimestone = new ShinseiOre(Material.rock).setBlockName("limestone");
 		GameRegistry.registerBlock(blockLimestone, "limestone");
+		OreDictionary.registerOre("blockStone", new ItemStack(blockLimestone));
 		blockSiltstone = new ShinseiOre(Material.rock).setBlockName("siltstone").setResistance(2F).setHardness(0.5F);
 		blockSiltstone.setHarvestLevel("shovel", 0);
 		GameRegistry.registerBlock(blockSiltstone, "siltstone");		 
@@ -107,6 +109,8 @@ public final class ShinseiBlocks {
 		//Building Blocks
 		blockMarble = new BlockMarble().setBlockName("marble");
 		GameRegistry.registerBlock(blockMarble, ItemMarbleBlock.class, "marble");
+		
+		OreDictionary.registerOre("blockStone", new ItemStack(Blocks.stone));
 
 	}
 }

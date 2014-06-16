@@ -32,7 +32,7 @@ public class GuiToolBench extends GuiContainer {
 
 	protected void drawGuiContainerForegroundLayer(int i, int j){
 
-		this.fontRendererObj.drawString(StatCollector.translateToLocal("Tool Bench"), 100, 5, 0x000000);
+		this.fontRendererObj.drawString(StatCollector.translateToLocal("Tool Bench"), 100, 6, 0x000000);
 		
 		
 	}

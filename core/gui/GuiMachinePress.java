@@ -4,9 +4,12 @@ import org.lwjgl.opengl.GL11;
 
 import com.megathirio.shinsei.core.container.ContainerMachinePress;
 import com.megathirio.shinsei.lib.References;
+import com.megathirio.shinsei.tileentity.TileEntityForgeFurnace;
+import com.megathirio.shinsei.tileentity.TileEntityMachinePress;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.inventory.GuiContainer;
+import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;
 import net.minecraft.util.ResourceLocation;
@@ -16,7 +19,8 @@ import net.minecraft.world.World;
 public class GuiMachinePress extends GuiContainer {
 
 	private ResourceLocation texture = new ResourceLocation(References.MODID + ":" + "textures/gui/containers/gui_machine_press.png");
-	
+	private TileEntityMachinePress machinePress;
+
 	public GuiMachinePress(InventoryPlayer invPlayer, World world, int x, int y, int z) {
 		super(new ContainerMachinePress(invPlayer, world, x, y, z));
 
@@ -32,9 +36,7 @@ public class GuiMachinePress extends GuiContainer {
 
 	protected void drawGuiContainerForegroundLayer(int i, int j){
 
-		this.fontRendererObj.drawString(StatCollector.translateToLocal("Machine Press"), 100, 5, 0x000000);
-		
-		
+		this.fontRendererObj.drawString(StatCollector.translateToLocal("Machine Press"), 75, 6, 0x000000);
 	}
 	
 	@Override
