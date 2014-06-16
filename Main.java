@@ -1,7 +1,5 @@
 package com.megathirio.shinsei;
 
-import net.minecraft.creativetab.CreativeTabs;
-
 import com.megathirio.shinsei.blocks.ShinseiBlocks;
 import com.megathirio.shinsei.blocks.ShinseiMachines;
 import com.megathirio.shinsei.core.handler.CraftingHandler;
